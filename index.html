@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>أصل الفريسكا | أبوحماد - أمام سيراميكا الأعصر</title>
+  <meta name="description" content="أصل الفريسكا في أبوحماد أمام سيراميكا الأعصر — فريسكا، ميكس، وبان كيك مع توصيل داخل وخارج أبوحماد وطلب مباشر عبر واتساب." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -141,40 +142,22 @@
       text-align: center;
     }
 
-    .chef-emblem {
-      width: 112px;
-      height: 112px;
-      margin: 0 auto 12px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 25%, #fde68a, #d97706 68%, #7c2d12 100%);
-      border: 3px solid var(--gold);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #1c0c04;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    .hero-poster-box {
+      width: min(360px, 100%);
+      margin: 0 auto 14px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--gold);
+      background: var(--surface-2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.38);
     }
 
-    .chef-emblem .hat {
-      font-size: 0.68rem;
-      font-weight: 800;
-      background: #fff7ed;
-      padding: 1px 7px;
-      border-radius: 999px;
-      margin-bottom: 3px;
-    }
-
-    .chef-emblem .name {
-      font-size: 0.92rem;
-      font-weight: 900;
-      line-height: 1.1;
-    }
-
-    .chef-emblem .sub {
-      font-size: 0.65rem;
-      font-weight: 800;
-      margin-top: 2px;
+    .hero-poster-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      display: block;
+      background: #1c1008;
     }
 
     .pill-line {
@@ -701,10 +684,8 @@
     <!-- صفحة المنيو -->
     <div id="menuView">
       <section class="hero-card">
-        <div class="chef-emblem">
-          <span class="hat">أصل الفريسكا</span>
-          <span class="name">أصل الفريسكا</span>
-          <span class="sub">بان كيك وفريسكا</span>
+        <div class="hero-poster-box">
+          <img src="poster.jpg" alt="أصل الفريسكا" class="hero-poster-img" />
         </div>
         <div class="pill-line">فريسكا • ميكس • بان كيك</div>
         <h2 class="hero-title">أصل الفريسكا</h2>
