@@ -655,3 +655,128 @@
               <h3>تحضير أول بأول</h3>
               <p>اهتمام بالتفاصيل والقوام الطازج عشان التجربة تفضل بنفس المستوى في كل زيارة.</p>
             </div>
+          </div>
+          <div class="card">
+            <div>
+              <span class="tag">02</span>
+              <h3>موقع واضح وسهل الوصول</h3>
+              <p>موجودين في أبوحماد أمام سيراميكا الأعصر، ومكان واضح لأي حد يزورنا.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <span class="tag">03</span>
+              <h3>تشغيل دائم على GitHub Pages</h3>
+              <p>الرابط مستمر بدون مؤقت 14 يوم، ويمكن تعديل الأسعار والأصناف من ملف index.html بسهولة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location">
+      <div class="container">
+        <div class="section-head">
+          <h2>العنوان وتجهيز الطلب</h2>
+          <p>راجع تفاصيل المكان أو جهّز قائمة الأصناف اللي تحب تطلبها.</p>
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="info-item">
+              <strong>الاسم التجاري</strong>
+              <span>أصل الفريسكا</span>
+            </div>
+            <div class="info-item">
+              <strong>العنوان</strong>
+              <span>أبوحماد · أمام سيراميكا الأعصر</span>
+            </div>
+            <div class="info-item">
+              <strong>ملاحظة للتعديل</strong>
+              <span>يمكنك تعديل الأسعار أو إضافة رقم واتساب مباشر داخل الكود في أي وقت.</span>
+            </div>
+          </div>
+
+          <div class="order-box">
+            <h3>قائمة الطلب الحالية</h3>
+            <ul class="order-list" id="orderList">
+              <li><span>لم تتم إضافة أصناف بعد</span><span>0 ج.م</span></li>
+            </ul>
+            <div class="total-row">
+              <span>الإجمالي التقديري</span>
+              <span id="totalPrice">0 ج.م</span>
+            </div>
+            <button class="btn-primary" style="width: 100%;" onclick="clearOrder()">إفراغ القائمة</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      أصل الفريسكا — أبوحماد · أمام سيراميكا الأعصر
+    </div>
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('#itemsGrid .card');
+    const orderList = document.getElementById('orderList');
+    const totalPriceEl = document.getElementById('totalPrice');
+    let cart = [];
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach((card) => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    function addItem(name, price) {
+      cart.push({ name, price });
+      renderCart();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function clearOrder() {
+      cart = [];
+      renderCart();
+    }
+
+    function renderCart() {
+      if (!cart.length) {
+        orderList.innerHTML = '<li><span>لم تتم إضافة أصناف بعد</span><span>0 ج.م</span></li>';
+        totalPriceEl.textContent = '0 ج.م';
+        return;
+      }
+
+      let total = 0;
+      orderList.innerHTML = cart
+        .map((item, idx) => {
+          total += item.price;
+          return `<li>
+            <span>${item.name} — <strong>${item.price} ج.م</strong></span>
+            <button class="mini-btn" onclick="removeItem(${idx})">حذف</button>
+          </li>`;
+        })
+        .join('');
+
+      totalPriceEl.textContent = `${total} ج.م`;
+    }
+  </script>
+</body>
+</html>
