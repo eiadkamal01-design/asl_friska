@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>أصل الفريسكا | شارع بورسعيد أمام سيراميكا الأعصر</title>
+  <title>أصل الفريسكا | أبوحماد - أمام سيراميكا الأعصر</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-dark: #140a05;
-      --bg-card: #231209;
-      --bg-card-hover: #2f180c;
+      --bg: #170e07;
+      --surface: #23150b;
+      --surface-2: #2d1b0e;
       --gold: #f59e0b;
-      --gold-bright: #fbbf24;
+      --amber: #d97706;
       --orange: #ea580c;
-      --red-accent: #dc2626;
-      --cream: #fff7ed;
-      --muted: #dec8b6;
-      --border: rgba(251, 191, 36, 0.24);
+      --green: #16a34a;
+      --text: #fff7ed;
+      --muted: #c8b29b;
+      --border: rgba(245, 158, 11, 0.22);
     }
 
     *, *::before, *::after {
@@ -32,876 +32,1090 @@
       scroll-behavior: smooth;
       overflow-x: hidden;
       overflow-y: auto;
-      writing-mode: horizontal-tb;
-      transform: none;
     }
 
     body {
       direction: rtl;
-      font-family: 'Cairo', 'Tajawal', sans-serif;
-      background: radial-gradient(circle at top, #2e1508 0%, var(--bg-dark) 62%);
-      color: var(--cream);
-      line-height: 1.65;
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
+      padding-bottom: 84px;
       overflow-x: hidden;
       overflow-y: auto;
-      writing-mode: horizontal-tb;
-      transform: none;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1160px, 92%);
+    .wrap {
+      width: min(760px, 94%);
       margin: 0 auto;
     }
 
-    /* Header */
-    header {
+    /* Top Header */
+    .topbar {
       position: sticky;
       top: 0;
-      z-index: 60;
-      background: rgba(20, 10, 5, 0.92);
+      z-index: 40;
+      background: rgba(23, 14, 7, 0.94);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
+      padding: 10px 0;
     }
 
-    .nav-wrap {
+    .topbar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 0;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .brand {
+    .brand-mini {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .brand-badge {
-      width: 44px;
-      height: 44px;
+    .logo-circle {
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold-bright), var(--orange));
-      color: #1a0b04;
+      background: linear-gradient(135deg, #fbbf24, #ea580c);
+      color: #1c0c04;
       display: grid;
       place-items: center;
       font-weight: 900;
-      font-size: 1.05rem;
-    }
-
-    .brand-title {
-      font-weight: 900;
-      font-size: 1.2rem;
-      color: var(--gold-bright);
-    }
-
-    .brand-sub {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      font-weight: 700;
       font-size: 0.92rem;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: var(--gold-bright);
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: linear-gradient(135deg, var(--gold-bright), var(--orange));
-      color: #180903;
-      font-weight: 800;
-      padding: 10px 18px;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 0.92rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 8px 22px rgba(234, 88, 12, 0.28);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: #16a34a;
-      color: #ffffff;
-      font-weight: 800;
-      padding: 12px 20px;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 0.96rem;
-      width: 100%;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .btn-whatsapp:hover {
-      background: #15803d;
-      transform: translateY(-1px);
-    }
-
-    /* Hero */
-    .hero {
-      padding: 44px 0 32px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .top-blessings {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 14px;
-    }
-
-    .blessing-chip {
-      background: rgba(251, 191, 36, 0.14);
-      border: 1px solid var(--border);
-      color: var(--gold-bright);
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 0.84rem;
-      font-weight: 800;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 4.3vw, 3.2rem);
-      font-weight: 900;
-      line-height: 1.2;
-      margin-bottom: 12px;
-    }
-
-    h1 span {
-      color: var(--gold-bright);
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-
-    .addr-strip {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      font-size: 0.92rem;
-    }
-
-    .addr-strip strong {
-      color: var(--gold-bright);
-    }
-
-    .poster-frame {
-      background: var(--bg-card);
-      border: 2px solid var(--border);
-      border-radius: 22px;
-      padding: 12px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-    }
-
-    .poster-frame img {
-      width: 100%;
-      max-height: 460px;
-      object-fit: cover;
-      border-radius: 16px;
-      display: block;
-    }
-
-    .poster-caption {
-      margin-top: 10px;
       text-align: center;
-      color: var(--gold-bright);
-      font-weight: 800;
-      font-size: 0.92rem;
+      line-height: 1.05;
+      border: 2px solid #fff7ed;
+      flex-shrink: 0;
     }
 
-    /* Main Layout with Cart */
-    .shop-layout {
-      display: grid;
-      grid-template-columns: 1fr 350px;
-      gap: 24px;
-      align-items: start;
-      padding: 20px 0 56px;
-    }
-
-    .category-tabs {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .tab-btn {
-      background: var(--bg-card);
-      color: var(--cream);
-      border: 1px solid var(--border);
-      padding: 9px 16px;
-      border-radius: 11px;
-      font-family: inherit;
-      font-weight: 800;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .tab-btn.active,
-    .tab-btn:hover {
-      background: linear-gradient(135deg, var(--gold-bright), var(--orange));
-      color: #180903;
-      border-color: transparent;
-    }
-
-    .menu-section {
-      margin-bottom: 36px;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-title h2 {
-      font-size: 1.45rem;
+    .brand-mini h1 {
+      font-size: 1.05rem;
       font-weight: 900;
-      color: var(--gold-bright);
-    }
-
-    .section-title span {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .items-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .item-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .item-card:hover {
-      background: var(--bg-card-hover);
-      transform: translateY(-2px);
-    }
-
-    .item-name {
-      font-weight: 800;
-      font-size: 0.98rem;
       color: #ffffff;
     }
 
-    .item-price {
-      color: var(--gold-bright);
+    .brand-mini p {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .cart-icon-btn {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--gold);
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      padding: 0 5px;
+    }
+
+    /* Hero Banner */
+    .hero-card {
+      margin-top: 14px;
+      background: linear-gradient(180deg, #2b190d 0%, #1c1008 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .chef-emblem {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, #fde68a, #d97706 68%, #7c2d12 100%);
+      border: 3px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #1c0c04;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .chef-emblem .hat {
+      font-size: 0.68rem;
+      font-weight: 800;
+      background: #fff7ed;
+      padding: 1px 7px;
+      border-radius: 999px;
+      margin-bottom: 3px;
+    }
+
+    .chef-emblem .name {
+      font-size: 0.92rem;
       font-weight: 900;
-      font-size: 0.95rem;
+      line-height: 1.1;
+    }
+
+    .chef-emblem .sub {
+      font-size: 0.65rem;
+      font-weight: 800;
       margin-top: 2px;
     }
 
-    .add-btn {
-      background: rgba(251, 191, 36, 0.16);
-      color: var(--gold-bright);
-      border: 1px solid var(--border);
-      padding: 7px 13px;
-      border-radius: 10px;
-      font-family: inherit;
-      font-weight: 800;
-      font-size: 0.85rem;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-    }
-
-    .add-btn:hover {
-      background: var(--gold-bright);
-      color: #180903;
-    }
-
-    /* Cart Panel */
-    .cart-panel {
-      position: sticky;
-      top: 82px;
-      background: var(--bg-card);
-      border: 1.5px solid var(--border);
-      border-radius: 20px;
-      padding: 18px;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
-    }
-
-    .cart-panel h3 {
-      font-size: 1.2rem;
-      font-weight: 900;
-      color: var(--gold-bright);
-      margin-bottom: 12px;
-      display: flex;
-      justify-content: space-between;
+    .pill-line {
+      display: inline-flex;
       align-items: center;
+      gap: 6px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid var(--border);
+      color: var(--gold);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      margin-bottom: 8px;
     }
 
-    .cart-items {
-      display: grid;
-      gap: 8px;
-      max-height: 260px;
-      overflow-y: auto;
-      margin-bottom: 14px;
+    .hero-title {
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 6px;
     }
 
-    .cart-empty {
-      text-align: center;
+    .hero-quote {
       color: var(--muted);
-      font-size: 0.9rem;
-      padding: 18px 8px;
-      border: 1px dashed var(--border);
-      border-radius: 12px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
-    .cart-row {
-      background: rgba(20, 10, 5, 0.65);
+    .hero-tags {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .hero-tag {
+      background: var(--surface-2);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 9px 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .cart-row-info {
-      font-size: 0.86rem;
-    }
-
-    .cart-row-name {
-      font-weight: 800;
-      color: #ffffff;
-      display: block;
-    }
-
-    .cart-row-sub {
-      color: var(--gold-bright);
-      font-weight: 700;
-      font-size: 0.8rem;
-    }
-
-    .qty-controls {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .qty-btn {
-      width: 24px;
-      height: 24px;
-      border-radius: 7px;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      color: var(--cream);
-      font-weight: 800;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    .qty-btn.del {
-      color: #fca5a5;
-      border-color: rgba(248, 113, 113, 0.35);
-    }
-
-    .cart-total {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 900;
-      font-size: 1.08rem;
-      color: var(--gold-bright);
-      padding: 10px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 12px;
-    }
-
-    .field-group {
-      margin-bottom: 10px;
-    }
-
-    .field-group label {
-      display: block;
-      font-size: 0.84rem;
-      font-weight: 700;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .field-group input,
-    .field-group textarea {
-      width: 100%;
-      background: rgba(20, 10, 5, 0.8);
-      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 5px 11px;
       border-radius: 10px;
-      padding: 9px 11px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    /* Search & Tabs */
+    .search-box {
+      margin-top: 14px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 11px 14px;
       color: #ffffff;
       font-family: inherit;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
 
-    .field-group input:focus,
-    .field-group textarea:focus {
+    .search-box input:focus {
       outline: none;
-      border-color: var(--gold-bright);
+      border-color: var(--gold);
     }
 
-    .cart-actions {
+    .cat-pills {
       display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 8px;
       margin-top: 10px;
     }
 
-    .clear-btn {
-      background: transparent;
-      color: var(--muted);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      padding: 8px;
-      border-radius: 10px;
+    .cat-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 6px;
+      border-radius: 11px;
       font-family: inherit;
-      font-weight: 700;
+      font-weight: 800;
+      font-size: 0.86rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .cat-pill.active {
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #190b03;
+      border-color: transparent;
+    }
+
+    /* Menu Sections */
+    .menu-block {
+      margin-top: 18px;
+    }
+
+    .menu-block-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .menu-block-head h2 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .menu-block-head span {
+      background: rgba(245, 158, 11, 0.14);
+      color: var(--gold);
+      border: 1px solid var(--border);
+      padding: 2px 9px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+
+    .product-row {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: background 0.18s ease;
+    }
+
+    .product-row:hover {
+      background: var(--surface-2);
+    }
+
+    .product-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .price-chip {
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-weight: 900;
       font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 9px;
+      white-space: nowrap;
+    }
+
+    .product-name {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #ffffff;
+    }
+
+    .product-cat {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .product-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .in-cart-badge {
+      background: #16a34a;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    .plus-box {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--gold);
+      font-size: 1.15rem;
+      font-weight: 900;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Cart View */
+    .cart-view {
+      margin-top: 16px;
+    }
+
+    .cart-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .cart-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .cart-title-row h2 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .cart-item-box {
+      background: var(--bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .item-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #1c0c04;
+      font-weight: 900;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .stepper {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stepper button {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: #ffffff;
+      font-weight: 900;
       cursor: pointer;
     }
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 22px 0;
-      text-align: center;
+    .add-more-btn {
+      width: 100%;
+      background: var(--surface-2);
+      border: 1px dashed var(--border);
+      color: var(--gold);
+      padding: 10px;
+      border-radius: 12px;
+      font-family: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+
+    .delivery-note {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid var(--border);
       color: var(--muted);
-      font-size: 0.88rem;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      line-height: 1.5;
     }
 
-    @media (max-width: 960px) {
-      .hero-grid,
-      .shop-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .cart-panel {
-        position: static;
-      }
+    .form-group {
+      margin-bottom: 12px;
     }
 
-    @media (max-width: 600px) {
-      .items-grid {
-        grid-template-columns: 1fr;
-      }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 11px;
+      padding: 10px 12px;
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .phone-choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .phone-btn {
+      background: var(--bg);
+      border: 1.5px solid rgba(255, 255, 255, 0.14);
+      color: var(--text);
+      padding: 10px;
+      border-radius: 12px;
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 0.92rem;
+      cursor: pointer;
+    }
+
+    .phone-btn.active {
+      border-color: var(--gold);
+      background: rgba(245, 158, 11, 0.16);
+      color: var(--gold);
+    }
+
+    .summary-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    .summary-line.total {
+      margin-bottom: 0;
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .wa-send-btn {
+      width: 100%;
+      background: var(--green);
+      color: #ffffff;
+      border: none;
+      border-radius: 13px;
+      padding: 13px;
+      font-family: inherit;
+      font-weight: 900;
+      font-size: 0.98rem;
+      cursor: pointer;
+    }
+
+    .wa-send-btn:hover {
+      background: #15803d;
+    }
+
+    /* Quantity Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.72);
+      z-index: 80;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-sheet {
+      width: min(560px, 100%);
+      background: var(--surface);
+      border-top: 2px solid var(--gold);
+      border-radius: 22px 22px 0 0;
+      padding: 20px;
+    }
+
+    .modal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .close-modal-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: #fff;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .qty-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .qty-bar button {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--gold);
+      font-size: 1.3rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .qty-bar span {
+      font-size: 1.3rem;
+      font-weight: 900;
+      min-width: 32px;
+      text-align: center;
+    }
+
+    .confirm-add-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #190b03;
+      border: none;
+      border-radius: 13px;
+      padding: 13px;
+      font-family: inherit;
+      font-weight: 900;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* Bottom Nav */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(23, 14, 7, 0.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      padding: 8px 0;
+    }
+
+    .bottom-nav-inner {
+      width: min(760px, 96%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .nav-tab {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 6px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .nav-tab.active {
+      color: var(--gold);
+      background: rgba(245, 158, 11, 0.12);
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav-wrap">
-      <a href="#top" class="brand">
-        <div class="brand-badge">أصل</div>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand-mini">
+        <div class="logo-circle">أصل<br>الفريسكا</div>
         <div>
-          <div class="brand-title">أصل الفريسكا</div>
-          <div class="brand-sub">شارع بورسعيد أمام سيراميكا الأعصر</div>
+          <h1>أصل الفريسكا</h1>
+          <p>أبوحماد - أمام سيراميكا الأعصر</p>
         </div>
-      </a>
-      <nav>
-        <a href="#sec-friska">فريسكا</a>
-        <a href="#sec-mix">فريسكا ميكس</a>
-        <a href="#sec-pancake">بان كيك</a>
-        <a href="#cartSection">السلة والطلب</a>
-      </nav>
-      <a href="https://wa.me/201220209582" target="_blank" rel="noopener" class="btn-primary">واتساب: 01220209582</a>
+      </div>
+      <button class="cart-icon-btn" onclick="switchView('cart')" aria-label="السلة">
+        🛒
+        <span class="cart-badge" id="topCartBadge">0</span>
+      </button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="top-blessings">
-            <span class="blessing-chip">أهم حاجة تصلي على النبي</span>
-            <span class="blessing-chip">أمي أكسجين حياتي</span>
-          </div>
-          <h1>أصل <span>الفريسكا</span> مقرمشة بطعم النعنشة</h1>
-          <p>
-            اختار من الفريسكا، فريسكا ميكس، أو البان كيك، أضف الكميات اللي تحبها في السلة، واكتب رقم تليفونك وعنوانك عشان يوصلك الطلب مباشرة على واتساب.
-          </p>
-          <div class="hero-actions">
-            <a href="#sec-friska" class="btn-primary">منيو الفريسكا</a>
-            <a href="#sec-pancake" class="tab-btn">منيو البان كيك</a>
-            <a href="https://wa.me/201220209582" target="_blank" rel="noopener" class="tab-btn">تواصل واتساب</a>
-          </div>
-          <div class="addr-strip">
-            <div><strong>العنوان:</strong> شارع بورسعيد أمام سيراميكا الأعصر</div>
-            <div><strong>رقم الطلب:</strong> <a href="tel:01220209582"><strong>01220209582</strong></a></div>
-          </div>
+  <main class="wrap">
+    <!-- صفحة المنيو -->
+    <div id="menuView">
+      <section class="hero-card">
+        <div class="chef-emblem">
+          <span class="hat">أصل الفريسكا</span>
+          <span class="name">أصل الفريسكا</span>
+          <span class="sub">بان كيك وفريسكا</span>
         </div>
-
-        <div class="poster-frame">
-          <img
-            src="poster.jpg"
-            alt="أصل الفريسكا - فريسكا مقرمشة بطعم النعنشة"
-            onerror="this.style.display='none'; document.getElementById('posterFallback').style.display='block';"
-          />
-          <div id="posterFallback" style="display:none; padding: 36px 18px; text-align:center; background: linear-gradient(155deg, #fbbf24, #ea580c); color:#1a0903; border-radius:16px;">
-            <div style="font-size:1.8rem; font-weight:900;">أصل الفريسكا</div>
-            <div style="font-weight:800; margin:6px 0;">فريسكا مقرمشة بطعم النعنشة</div>
-            <div style="font-size:0.9rem; font-weight:700;">شارع بورسعيد أمام سيراميكا الأعصر · 01220209582</div>
-          </div>
-          <div class="poster-caption">أصل الفريسكا · شارع بورسعيد أمام سيراميكا الأعصر</div>
+        <div class="pill-line">فريسكا • ميكس • بان كيك</div>
+        <h2 class="hero-title">أصل الفريسكا</h2>
+        <p class="hero-quote">«لو زعلان ومضايق واحدة فريسكا تخليك رايق»</p>
+        <div class="hero-tags">
+          <span class="hero-tag">📍 أبوحماد - أمام سيراميكا الأعصر</span>
+          <span class="hero-tag">🚚 توصيل داخل وخارج أبوحماد</span>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="container shop-layout">
-      <div>
-        <div class="category-tabs">
-          <button class="tab-btn active" data-show="all">كل الأصناف</button>
-          <button class="tab-btn" data-show="friska">فريسكا</button>
-          <button class="tab-btn" data-show="mix">فريسكا ميكس</button>
-          <button class="tab-btn" data-show="pancake">بان كيك</button>
-        </div>
-
-        <!-- الصنف الأول: فريسكا -->
-        <section id="sec-friska" class="menu-section" data-group="friska">
-          <div class="section-title">
-            <h2>فريسكا</h2>
-            <span>الصنف الأول</span>
-          </div>
-          <div class="items-grid" id="friskaGrid"></div>
-        </section>
-
-        <!-- الصنف الثاني: فريسكا ميكس -->
-        <section id="sec-mix" class="menu-section" data-group="mix">
-          <div class="section-title">
-            <h2>فريسكا ميكس</h2>
-            <span>الصنف الثاني</span>
-          </div>
-          <div class="items-grid" id="mixGrid"></div>
-        </section>
-
-        <!-- الصنف الثالث: بان كيك -->
-        <section id="sec-pancake" class="menu-section" data-group="pancake">
-          <div class="section-title">
-            <h2>بان كيك</h2>
-            <span>الصنف الثالث</span>
-          </div>
-          <div class="items-grid" id="pancakeGrid"></div>
-        </section>
+      <div class="search-box">
+        <input type="search" id="searchInput" placeholder="ابحث عن نكهتك... نوتيلا، لوتس، أوريو" oninput="renderMenu()" />
       </div>
 
-      <!-- السلة وبيانات الطلب -->
-      <aside id="cartSection" class="cart-panel">
-        <h3>
-          <span>سلة الطلبات</span>
-          <span id="cartCountBadge" style="font-size:0.85rem; color:var(--muted);">0 صنف</span>
-        </h3>
+      <div class="cat-pills">
+        <button class="cat-pill active" data-cat="all" onclick="setCategory('all')">الكل</button>
+        <button class="cat-pill" data-cat="friska" onclick="setCategory('friska')">فريسكا</button>
+        <button class="cat-pill" data-cat="mix" onclick="setCategory('mix')">ميكس</button>
+        <button class="cat-pill" data-cat="pancake" onclick="setCategory('pancake')">بان كيك</button>
+      </div>
 
-        <div class="cart-items" id="cartItemsContainer">
-          <div class="cart-empty">السلة فارغة — اضغط على (+ أضف) لاختيار الأصناف</div>
+      <div id="menuSections"></div>
+    </div>
+
+    <!-- صفحة السلة -->
+    <div id="cartView" class="cart-view" style="display:none;">
+      <div class="cart-card">
+        <div class="cart-title-row">
+          <h2>سلة الطلب</h2>
+          <span id="cartSummaryTop" style="font-size:0.85rem; color:var(--muted); font-weight:800;">0 قطعة • الإجمالي: 0 جنيه</span>
+        </div>
+        <div id="cartItemsList"></div>
+        <button class="add-more-btn" onclick="switchView('menu')">+ إضافة أصناف تانية</button>
+        <div class="delivery-note">
+          خدمة التوصيل متاحة داخل وخارج أبوحماد، ورسوم التوصيل يحددها المتجر حسب المنطقة عند تأكيد الطلب.
+        </div>
+      </div>
+
+      <div class="cart-card">
+        <h2 style="font-size:1.1rem; font-weight:900; color:var(--gold); margin-bottom:4px;">بيانات التوصيل</h2>
+        <p style="font-size:0.82rem; color:var(--muted); margin-bottom:14px;">املأ البيانات وأرسل الطلب على واتساب في خطوة واحدة</p>
+
+        <div class="form-group">
+          <label for="custName">الاسم</label>
+          <input type="text" id="custName" placeholder="اسمك الكريم" />
         </div>
 
-        <div class="cart-total">
-          <span>الإجمالي</span>
-          <span id="cartTotalPrice">0 ج</span>
+        <div class="form-group">
+          <label for="custPhone">رقم الموبايل</label>
+          <input type="tel" id="custPhone" placeholder="01xxxxxxxxxxx" />
         </div>
 
-        <div class="field-group">
-          <label for="customerPhone">رقم التليفون *</label>
-          <input type="tel" id="customerPhone" placeholder="مثال: 010xxxxxxxx" required />
+        <div class="form-group">
+          <label for="custAddress">العنوان بالتفصيل (داخل أو خارج أبوحماد)</label>
+          <input type="text" id="custAddress" placeholder="البلد أو المنطقة والشارع وأقرب علامة مميزة" />
         </div>
 
-        <div class="field-group">
-          <label for="customerAddress">العنوان بالتفصيل *</label>
-          <textarea id="customerAddress" rows="2" placeholder="اكتب المنطقة والشارع وأقرب علامة مميزة"></textarea>
+        <div class="form-group">
+          <label for="custNote">ملاحظات الطلب (اختياري)</label>
+          <textarea id="custNote" rows="2" placeholder="مثال: نوتيلا زيادة بدون مكسرات، الاتصال قبل الوصول"></textarea>
         </div>
 
-        <div class="field-group">
-          <label for="customerNotes">ملاحظات إضافية (اختياري)</label>
-          <input type="text" id="customerNotes" placeholder="مثال: زود صوص أو شوكولاتة" />
+        <div class="form-group">
+          <label>إرسال الطلب إلى رقم</label>
+          <div class="phone-choices">
+            <button type="button" class="phone-btn" data-num="201023991215" onclick="selectTargetPhone('201023991215')">01023991215</button>
+            <button type="button" class="phone-btn active" data-num="201220209582" onclick="selectTargetPhone('201220209582')">01220209582</button>
+          </div>
         </div>
 
-        <div class="cart-actions">
-          <button class="btn-whatsapp" onclick="sendOrderToWhatsApp()">إرسال الطلب على واتساب</button>
-          <button class="clear-btn" onclick="clearCart()">إفراغ السلة</button>
+        <div class="summary-box">
+          <div class="summary-line">
+            <span>عدد القطع</span>
+            <strong id="sumQty">0</strong>
+          </div>
+          <div class="summary-line total">
+            <span>الإجمالي</span>
+            <span id="sumTotal">0 جنيه</span>
+          </div>
         </div>
-      </aside>
+
+        <button type="button" class="wa-send-btn" onclick="submitWhatsAppOrder()">إرسال الطلب عبر واتساب</button>
+      </div>
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      أصل الفريسكا — شارع بورسعيد أمام سيراميكا الأعصر · واتساب: 01220209582
+  <!-- نافذة تحديد الكمية -->
+  <div class="modal-backdrop" id="qtyModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-sheet">
+      <div class="modal-top">
+        <div>
+          <div id="modalCat" style="font-size:0.78rem; color:var(--gold); font-weight:800;"></div>
+          <h3 id="modalName" style="font-size:1.2rem; font-weight:900;"></h3>
+          <div id="modalUnitPrice" style="font-size:0.9rem; color:var(--muted); font-weight:700;"></div>
+        </div>
+        <button class="close-modal-btn" onclick="closeModal()">✕</button>
+      </div>
+
+      <div class="qty-bar">
+        <button type="button" onclick="stepModalQty(-1)">-</button>
+        <span id="modalQtyValue">1</span>
+        <button type="button" onclick="stepModalQty(1)">+</button>
+      </div>
+
+      <button type="button" class="confirm-add-btn" id="confirmAddBtn" onclick="confirmModalAdd()">إضافة • 10 ج</button>
     </div>
-  </footer>
+  </div>
+
+  <!-- شريط التنقل السفلي -->
+  <nav class="bottom-nav">
+    <div class="bottom-nav-inner">
+      <button class="nav-tab active" id="tabMenu" onclick="switchView('menu')">
+        <span>🍽️</span>
+        <span>المنيو</span>
+      </button>
+      <button class="nav-tab" id="tabCart" onclick="switchView('cart')">
+        <span>🛒 السلة (<span id="bottomCartCount">0</span>)</span>
+        <span id="bottomCartTotal" style="font-size:0.74rem; color:var(--gold);">0 ج</span>
+      </button>
+      <a class="nav-tab" href="https://wa.me/201220209582" target="_blank" rel="noopener" style="text-decoration:none;">
+        <span>💬</span>
+        <span>واتساب</span>
+      </a>
+    </div>
+  </nav>
 
   <script>
-    const WHATSAPP_NUMBER = '201220209582';
+    const SECTIONS = [
+      {
+        id: 'friska',
+        title: 'فريسكا',
+        items: [
+          { name: 'نوتيلا', price: 10 },
+          { name: 'كارميل', price: 10 },
+          { name: 'فراولة', price: 10 },
+          { name: 'وايت', price: 15 },
+          { name: 'لوتس', price: 15 },
+          { name: 'هوهوز + نوتيلا', price: 20 },
+          { name: 'كيندر', price: 20 },
+          { name: 'هوهوز + نوتيلا وايت', price: 25 },
+          { name: 'أوريو + نوتيلا وايت', price: 25 },
+          { name: 'رولانا', price: 25 },
+          { name: 'مندوبين', price: 25 },
+          { name: 'توينكيز', price: 25 },
+          { name: 'بستاشيو', price: 25 },
+          { name: 'مور', price: 30 }
+        ]
+      },
+      {
+        id: 'mix',
+        title: 'فريسكا ميكس',
+        items: [
+          { name: 'وايت نوتيلا', price: 20 },
+          { name: 'لوتس وايت', price: 20 },
+          { name: 'نوتيلا لوتس', price: 20 },
+          { name: 'كيندر نوتيلا', price: 20 },
+          { name: 'وايت كيندر', price: 20 },
+          { name: 'مندولين هوهوز', price: 30 },
+          { name: 'أوريو هوهوز', price: 30 },
+          { name: 'أوريو توينكيز', price: 30 },
+          { name: 'شاورما فريسكا', price: 80 },
+          { name: 'شاورما كبير', price: 100 }
+        ]
+      },
+      {
+        id: 'pancake',
+        title: 'بان كيك',
+        items: [
+          { name: '16 قطعة نوتيلا', price: 30 },
+          { name: '16 نوتيلا وايت', price: 40 },
+          { name: '16 نوتيلا كيندر', price: 40 },
+          { name: '16 نوتيلا لوتس', price: 40 },
+          { name: '16 لوتس وايت', price: 40 },
+          { name: '16 كيندر', price: 40 },
+          { name: '16 لوتس', price: 40 },
+          { name: '16 وايت', price: 40 },
+          { name: '16 بستاشيو', price: 50 },
+          { name: '16 بستاشيو وايت', price: 50 },
+          { name: '16 بستاشيو نوتيلا', price: 50 },
+          { name: 'موناليزا 15ق', price: 50 },
+          { name: 'موناليزا 20ق', price: 60 },
+          { name: 'موناليزا 25ق', price: 70 },
+          { name: 'وايت كيندر كراميل 15ق', price: 50 },
+          { name: 'كيندر لوتس كراميل 15ق', price: 50 },
+          { name: 'نوتيلا 20ق', price: 40 },
+          { name: 'نوتيلا وايت 20ق', price: 50 },
+          { name: 'نوتيلا لوتس 20ق', price: 50 },
+          { name: 'نوتيلا كيندر 20ق', price: 50 },
+          { name: 'نوتيلا بيستاشيو 20ق', price: 60 },
+          { name: 'نوتيلا 25ق', price: 50 },
+          { name: 'نوتيلا وايت 25ق', price: 60 },
+          { name: 'نوتيلا لوتس 25ق', price: 60 },
+          { name: 'نوتيلا كيندر 25ق', price: 60 }
+        ]
+      }
+    ];
 
-    const MENU_DATA = {
-      friska: [
-        { name: 'هوهوز + نوتيلا', price: 20 },
-        { name: 'هوهوز + نوتيلا وايت', price: 25 },
-        { name: 'أوريو + نوتيلا وايت', price: 25 },
-        { name: 'رولانا', price: 25 },
-        { name: 'مندوبين', price: 25 },
-        { name: 'توينكيز', price: 25 },
-        { name: 'مور', price: 30 },
-        { name: 'نوتيلا', price: 10 },
-        { name: 'وايت', price: 15 },
-        { name: 'لوتس', price: 15 },
-        { name: 'كيندر', price: 20 },
-        { name: 'بستاشيو', price: 25 },
-        { name: 'كارميل', price: 10 },
-        { name: 'فراولة', price: 10 }
-      ],
-      mix: [
-        { name: 'وايت نوتيلا', price: 20 },
-        { name: 'لوتس وايت', price: 20 },
-        { name: 'نوتيلا لوتس', price: 20 },
-        { name: 'كيندر نوتيلا', price: 20 },
-        { name: 'وايت كيندر', price: 20 },
-        { name: 'مندولين هوهوز', price: 30 },
-        { name: 'أوريو هوهوز', price: 30 },
-        { name: 'أوريو توينكيز', price: 30 },
-        { name: 'شاورما فريسكا', price: 80 },
-        { name: 'شاورما كبير', price: 100 }
-      ],
-      pancake: [
-        { name: '16 قطعة نوتيلا', price: 30 },
-        { name: '16 نوتيلا وايت', price: 40 },
-        { name: '16 نوتيلا كيندر', price: 40 },
-        { name: '16 نوتيلا لوتس', price: 40 },
-        { name: '16 لوتس وايت', price: 40 },
-        { name: '16 كيندر', price: 40 },
-        { name: '16 لوتس', price: 40 },
-        { name: '16 وايت', price: 40 },
-        { name: '16 بستاشيو', price: 50 },
-        { name: '16 بستاشيو وايت', price: 50 },
-        { name: '16 بستاشيو نوتيلا', price: 50 },
-        { name: 'موناليزا 15ق', price: 50 },
-        { name: 'موناليزا 20ق', price: 60 },
-        { name: 'موناليزا 25ق', price: 70 },
-        { name: 'وايت كيندر كراميل 15ق', price: 50 },
-        { name: 'كيندر لوتس كراميل 15ق', price: 50 },
-        { name: 'نوتيلا 20ق', price: 40 },
-        { name: 'نوتيلا وايت 20ق', price: 50 },
-        { name: 'نوتيلا لوتس 20ق', price: 50 },
-        { name: 'نوتيلا كيندر 20ق', price: 50 },
-        { name: 'نوتيلا بيستاشيو 20ق', price: 60 },
-        { name: 'نوتيلا 25ق', price: 50 },
-        { name: 'نوتيلا وايت 25ق', price: 60 },
-        { name: 'نوتيلا لوتس 25ق', price: 60 },
-        { name: 'نوتيلا كيندر 25ق', price: 60 }
-      ]
-    };
-
-    const CATEGORY_LABELS = {
-      friska: 'فريسكا',
-      mix: 'فريسكا ميكس',
-      pancake: 'بان كيك'
-    };
-
+    let activeCategory = 'all';
     let cart = [];
+    let selectedTargetPhone = '201220209582';
+    let modalItem = null;
+    let modalQty = 1;
+
+    function setCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.cat === cat);
+      });
+      renderMenu();
+    }
+
+    function getItemQtyInCart(catTitle, name) {
+      const found = cart.find((c) => c.catTitle === catTitle && c.name === name);
+      return found ? found.qty : 0;
+    }
 
     function renderMenu() {
-      Object.keys(MENU_DATA).forEach((cat) => {
-        const gridEl = document.getElementById(`${cat}Grid`);
-        gridEl.innerHTML = MENU_DATA[cat]
-          .map(
-            (item, index) => `
-            <div class="item-card">
-              <div>
-                <div class="item-name">${item.name}</div>
-                <div class="item-price">${item.price} ج</div>
+      const q = document.getElementById('searchInput').value.trim();
+      const container = document.getElementById('menuSections');
+
+      const visibleSections = SECTIONS.filter((sec) => activeCategory === 'all' || sec.id === activeCategory);
+
+      container.innerHTML = visibleSections
+        .map((sec) => {
+          const filtered = sec.items.filter((it) => !q || it.name.includes(q) || sec.title.includes(q));
+          if (!filtered.length) return '';
+
+          return `
+            <div class="menu-block">
+              <div class="menu-block-head">
+                <h2>${sec.title}</h2>
+                <span>${filtered.length} صنف</span>
               </div>
-              <button class="add-btn" onclick="addToCart('${cat}', ${index})">+ أضف</button>
+              ${filtered
+                .map((it) => {
+                  const inCartQty = getItemQtyInCart(sec.title, it.name);
+                  const safeName = it.name.replace(/'/g, "\\'");
+                  return `
+                    <div class="product-row" onclick="openQtyModal('${sec.title}', '${safeName}', ${it.price})">
+                      <div class="product-left">
+                        <span class="price-chip">${it.price} ج</span>
+                        <div>
+                          <div class="product-name">${it.name}</div>
+                          <div class="product-cat">${sec.title}</div>
+                        </div>
+                      </div>
+                      <div class="product-right">
+                        ${inCartQty > 0 ? `<span class="in-cart-badge">✓ ${inCartQty}</span>` : ''}
+                        <span class="plus-box">+</span>
+                      </div>
+                    </div>
+                  `;
+                })
+                .join('')}
+            </div>
+          `;
+        })
+        .join('');
+    }
+
+    function openQtyModal(catTitle, name, price) {
+      modalItem = { catTitle, name, price };
+      modalQty = 1;
+      document.getElementById('modalCat').textContent = catTitle;
+      document.getElementById('modalName').textContent = name;
+      document.getElementById('modalUnitPrice').textContent = `${price} جنيه للقطعة`;
+      updateModalQtyUI();
+      document.getElementById('qtyModal').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('qtyModal').classList.remove('open');
+      modalItem = null;
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'qtyModal') closeModal();
+    }
+
+    function stepModalQty(delta) {
+      modalQty = Math.max(1, modalQty + delta);
+      updateModalQtyUI();
+    }
+
+    function updateModalQtyUI() {
+      document.getElementById('modalQtyValue').textContent = modalQty;
+      document.getElementById('confirmAddBtn').textContent = `إضافة • ${modalQty * modalItem.price} ج`;
+    }
+
+    function confirmModalAdd() {
+      if (!modalItem) return;
+      const existing = cart.find((c) => c.catTitle === modalItem.catTitle && c.name === modalItem.name);
+      if (existing) {
+        existing.qty += modalQty;
+      } else {
+        cart.push({ ...modalItem, qty: modalQty });
+      }
+      closeModal();
+      syncAllCartUI();
+    }
+
+    function changeCartQty(idx, delta) {
+      if (!cart[idx]) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) cart.splice(idx, 1);
+      syncAllCartUI();
+    }
+
+    function syncAllCartUI() {
+      const totalQty = cart.reduce((s, i) => s + i.qty, 0);
+      const totalPrice = cart.reduce((s, i) => s + i.qty * i.price, 0);
+
+      document.getElementById('topCartBadge').textContent = totalQty;
+      document.getElementById('bottomCartCount').textContent = totalQty;
+      document.getElementById('bottomCartTotal').textContent = `${totalPrice} ج`;
+      document.getElementById('cartSummaryTop').textContent = `${totalQty} قطعة • الإجمالي: ${totalPrice} جنيه`;
+      document.getElementById('sumQty').textContent = totalQty;
+      document.getElementById('sumTotal').textContent = `${totalPrice} جنيه`;
+
+      const listEl = document.getElementById('cartItemsList');
+      if (!cart.length) {
+        listEl.innerHTML = `<div style="text-align:center; color:var(--muted); padding:16px; font-size:0.9rem;">السلة فارغة — اختر أصناف من المنيو</div>`;
+      } else {
+        listEl.innerHTML = cart
+          .map(
+            (it, idx) => `
+            <div class="cart-item-box">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div class="item-avatar">${it.name.slice(0, 1)}</div>
+                <div>
+                  <div style="font-weight:800; font-size:0.94rem;">${it.name}</div>
+                  <div style="font-size:0.78rem; color:var(--muted);">${it.price} ج × ${it.qty} = <strong style="color:var(--gold);">${it.price * it.qty} ج</strong></div>
+                </div>
+              </div>
+              <div class="stepper">
+                <button type="button" onclick="changeCartQty(${idx}, 1)">+</button>
+                <span style="font-weight:800; min-width:20px; text-align:center;">${it.qty}</span>
+                <button type="button" onclick="changeCartQty(${idx}, -1)">-</button>
+                <button type="button" onclick="changeCartQty(${idx}, -999)" style="color:#fca5a5;">🗑</button>
+              </div>
             </div>
           `
           )
           .join('');
+      }
+
+      renderMenu();
+    }
+
+    function switchView(view) {
+      const isMenu = view === 'menu';
+      document.getElementById('menuView').style.display = isMenu ? 'block' : 'none';
+      document.getElementById('cartView').style.display = isMenu ? 'none' : 'block';
+      document.getElementById('tabMenu').classList.toggle('active', isMenu);
+      document.getElementById('tabCart').classList.toggle('active', !isMenu);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function selectTargetPhone(num) {
+      selectedTargetPhone = num;
+      document.querySelectorAll('.phone-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.num === num);
       });
     }
 
-    function addToCart(cat, index) {
-      const item = MENU_DATA[cat][index];
-      const existing = cart.find((c) => c.category === cat && c.name === item.name);
-      if (existing) {
-        existing.qty += 1;
-      } else {
-        cart.push({
-          category: cat,
-          categoryLabel: CATEGORY_LABELS[cat],
-          name: item.name,
-          price: item.price,
-          qty: 1
-        });
+    function generateOrderCode() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let code = '';
+      for (let i = 0; i < 5; i++) {
+        code += chars[Math.floor(Math.random() * chars.length)];
       }
-      renderCart();
+      return code;
     }
 
-    function changeQty(idx, delta) {
-      if (!cart[idx]) return;
-      cart[idx].qty += delta;
-      if (cart[idx].qty <= 0) {
-        cart.splice(idx, 1);
-      }
-      renderCart();
-    }
-
-    function clearCart() {
-      cart = [];
-      renderCart();
-    }
-
-    function renderCart() {
-      const container = document.getElementById('cartItemsContainer');
-      const totalEl = document.getElementById('cartTotalPrice');
-      const badgeEl = document.getElementById('cartCountBadge');
-
-      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-      const totalPrice = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
-
-      badgeEl.textContent = `${totalQty} قطعة`;
-      totalEl.textContent = `${totalPrice} ج`;
-
-      if (!cart.length) {
-        container.innerHTML = '<div class="cart-empty">السلة فارغة — اضغط على (+ أضف) لاختيار الأصناف</div>';
-        return;
-      }
-
-      container.innerHTML = cart
-        .map(
-          (item, idx) => `
-          <div class="cart-row">
-            <div class="cart-row-info">
-              <span class="cart-row-name">${item.name} (${item.categoryLabel})</span>
-              <span class="cart-row-sub">${item.qty} × ${item.price} ج = ${item.qty * item.price} ج</span>
-            </div>
-            <div class="qty-controls">
-              <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
-              <button class="qty-btn" onclick="changeQty(${idx}, -1)">-</button>
-              <button class="qty-btn del" onclick="changeQty(${idx}, -999)">×</button>
-            </div>
-          </div>
-        `
-        )
-        .join('');
-    }
-
-    function sendOrderToWhatsApp() {
-      const phone = document.getElementById('customerPhone').value.trim();
-      const address = document.getElementById('customerAddress').value.trim();
-      const notes = document.getElementById('customerNotes').value.trim();
+    function submitWhatsAppOrder() {
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const address = document.getElementById('custAddress').value.trim();
+      const note = document.getElementById('custNote').value.trim();
 
       if (!cart.length) {
         alert('من فضلك أضف صنف واحد على الأقل إلى السلة أولاً.');
         return;
       }
-      if (!phone) {
-        alert('من فضلك اكتب رقم التليفون.');
-        document.getElementById('customerPhone').focus();
-        return;
-      }
-      if (!address) {
-        alert('من فضلك اكتب العنوان بالتفصيل.');
-        document.getElementById('customerAddress').focus();
+      if (!name || !phone || !address) {
+        alert('من فضلك أكمل الاسم ورقم الموبايل والعنوان بالتفصيل.');
         return;
       }
 
-      const lines = cart.map(
-        (item, i) => `${i + 1}. [${item.categoryLabel}] ${item.name} — العدد: ${item.qty} — السعر: ${item.qty * item.price} ج`
-      );
-      const totalPrice = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+      const code = generateOrderCode();
+      const totalPrice = cart.reduce((s, i) => s + i.qty * i.price, 0);
+      const itemsText = cart.map((i) => `• ${i.name} × ${i.qty} = ${i.price * i.qty} ج`).join('\n');
 
-      let message = `طلب جديد من موقع أصل الفريسكا%0A`;
-      message += `------------------------%0A`;
-      message += lines.join('%0A') + `%0A`;
-      message += `------------------------%0A`;
-      message += `الإجمالي: ${totalPrice} ج%0A`;
-      message += `رقم التليفون: ${phone}%0A`;
-      message += `العنوان: ${address}`;
-      if (notes) {
-        message += `%0Aملاحظات: ${notes}`;
-      }
+      let msg = `طلب جديد من أصل الفريسكا\n`;
+      msg += `كود الطلب: ${code}\n`;
+      msg += `------------------------\n`;
+      msg += `${itemsText}\n`;
+      msg += `------------------------\n`;
+      msg += `الإجمالي: ${totalPrice} جنيه\n`;
+      msg += `الاسم: ${name}\n`;
+      msg += `الموبايل: ${phone}\n`;
+      msg += `العنوان: ${address}\n`;
+      if (note) msg += `ملاحظات: ${note}\n`;
+      msg += `التوصيل داخل وخارج أبوحماد - أبوحماد - أمام سيراميكا الأعصر`;
 
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+      const url = `https://wa.me/${selectedTargetPhone}?text=${encodeURIComponent(msg)}`;
       window.open(url, '_blank', 'noopener');
     }
 
-    document.querySelectorAll('.tab-btn[data-show]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn[data-show]').forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        const target = btn.getAttribute('data-show');
-        document.querySelectorAll('.menu-section[data-group]').forEach((sec) => {
-          const grp = sec.getAttribute('data-group');
-          sec.style.display = target === 'all' || target === grp ? 'block' : 'none';
-        });
-      });
-    });
-
     renderMenu();
-    renderCart();
+    syncAllCartUI();
   </script>
 </body>
 </html>
