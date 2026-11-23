@@ -3,43 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>أصل الفريسكا | أبوحماد</title>
+  <title>أصل الفريسكا | شارع بورسعيد أمام سيراميكا الأعصر</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-dark: #140b07;
-      --bg-card: #22120b;
-      --bg-card-hover: #2d180e;
+      --bg-dark: #140a05;
+      --bg-card: #231209;
+      --bg-card-hover: #2f180c;
       --gold: #f59e0b;
       --gold-bright: #fbbf24;
       --orange: #ea580c;
+      --red-accent: #dc2626;
       --cream: #fff7ed;
-      --muted: #d6c2b2;
-      --border: rgba(251, 191, 36, 0.22);
+      --muted: #dec8b6;
+      --border: rgba(251, 191, 36, 0.24);
     }
 
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
     html {
+      direction: rtl;
       scroll-behavior: smooth;
-      overflow-y: auto;
       overflow-x: hidden;
+      overflow-y: auto;
+      writing-mode: horizontal-tb;
+      transform: none;
     }
 
     body {
+      direction: rtl;
       font-family: 'Cairo', 'Tajawal', sans-serif;
-      background: radial-gradient(circle at top, #2c1509 0%, var(--bg-dark) 58%);
+      background: radial-gradient(circle at top, #2e1508 0%, var(--bg-dark) 62%);
       color: var(--cream);
-      line-height: 1.7;
+      line-height: 1.65;
       min-height: 100vh;
-      overflow-y: auto;
       overflow-x: hidden;
+      overflow-y: auto;
+      writing-mode: horizontal-tb;
+      transform: none;
     }
 
     a {
@@ -48,7 +55,7 @@
     }
 
     .container {
-      width: min(1120px, 92%);
+      width: min(1160px, 92%);
       margin: 0 auto;
     }
 
@@ -56,8 +63,8 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(20, 11, 7, 0.9);
+      z-index: 60;
+      background: rgba(20, 10, 5, 0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
@@ -66,7 +73,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 0;
+      padding: 12px 0;
       gap: 12px;
       flex-wrap: wrap;
     }
@@ -74,44 +81,42 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .brand-badge {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--gold-bright), var(--orange));
       color: #1a0b04;
       display: grid;
       place-items: center;
       font-weight: 900;
-      font-size: 1.15rem;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+      font-size: 1.05rem;
     }
 
     .brand-title {
       font-weight: 900;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: var(--gold-bright);
     }
 
     .brand-sub {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--muted);
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
     nav a {
-      font-size: 0.95rem;
       font-weight: 700;
-      color: var(--cream);
+      font-size: 0.92rem;
       transition: color 0.2s ease;
     }
 
@@ -125,74 +130,79 @@
       justify-content: center;
       gap: 8px;
       background: linear-gradient(135deg, var(--gold-bright), var(--orange));
-      color: #180a03;
+      color: #180903;
       font-weight: 800;
-      padding: 11px 22px;
+      padding: 10px 18px;
       border-radius: 12px;
       border: none;
       cursor: pointer;
       font-family: inherit;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 8px 24px rgba(234, 88, 12, 0.28);
+      box-shadow: 0 8px 22px rgba(234, 88, 12, 0.28);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(245, 158, 11, 0.38);
     }
 
-    .btn-outline {
+    .btn-whatsapp {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: transparent;
-      color: var(--gold-bright);
+      background: #16a34a;
+      color: #ffffff;
       font-weight: 800;
-      padding: 11px 20px;
+      padding: 12px 20px;
       border-radius: 12px;
-      border: 1.5px solid var(--border);
+      border: none;
       cursor: pointer;
       font-family: inherit;
-      font-size: 0.95rem;
-      transition: background 0.2s ease;
+      font-size: 0.96rem;
+      width: 100%;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .btn-outline:hover {
-      background: rgba(251, 191, 36, 0.1);
+    .btn-whatsapp:hover {
+      background: #15803d;
+      transform: translateY(-1px);
     }
 
     /* Hero */
     .hero {
-      padding: 56px 0 44px;
+      padding: 44px 0 32px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.15fr 0.85fr;
       gap: 28px;
       align-items: center;
     }
 
-    .pill {
-      display: inline-block;
-      background: rgba(245, 158, 11, 0.14);
-      border: 1px solid var(--border);
-      color: var(--gold-bright);
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
+    .top-blessings {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
       margin-bottom: 14px;
     }
 
+    .blessing-chip {
+      background: rgba(251, 191, 36, 0.14);
+      border: 1px solid var(--border);
+      color: var(--gold-bright);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
     h1 {
-      font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+      font-size: clamp(2rem, 4.3vw, 3.2rem);
       font-weight: 900;
       line-height: 1.2;
-      margin-bottom: 14px;
-      color: #ffffff;
+      margin-bottom: 12px;
     }
 
     h1 span {
@@ -201,295 +211,343 @@
 
     .hero p {
       color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 24px;
-      max-width: 600px;
+      font-size: 1rem;
+      margin-bottom: 20px;
     }
 
     .hero-actions {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
 
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-
-    .stat-box {
+    .addr-strip {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 14px;
-      text-align: center;
-    }
-
-    .stat-box strong {
-      display: block;
-      font-size: 1.15rem;
-      color: var(--gold-bright);
-    }
-
-    .stat-box span {
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    .poster-card {
-      background: linear-gradient(160deg, #fbbf24 0%, #f97316 55%, #9a3412 100%);
-      border-radius: 24px;
-      padding: 28px 22px;
-      color: #1c0b03;
-      text-align: center;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-      border: 2px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .poster-circle {
-      width: 118px;
-      height: 118px;
-      margin: 0 auto 14px;
-      border-radius: 50%;
-      background: #1b0c05;
-      color: var(--gold-bright);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 1.35rem;
-      border: 4px solid #fff7ed;
-    }
-
-    .poster-card h2 {
-      font-size: 1.9rem;
-      font-weight: 900;
-      margin-bottom: 6px;
-    }
-
-    .poster-card .location-tag {
-      display: inline-block;
-      background: rgba(27, 12, 5, 0.88);
-      color: #fff7ed;
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .poster-card p {
-      color: #240e04;
-      font-weight: 700;
-      font-size: 0.96rem;
-    }
-
-    /* Sections */
-    section {
-      padding: 46px 0;
-    }
-
-    .section-head {
-      margin-bottom: 24px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(1.5rem, 3vw, 2.15rem);
-      font-weight: 900;
-      color: var(--gold-bright);
-      margin-bottom: 6px;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    /* Filter & Grid */
-    .filters {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-
-    .filter-btn {
-      background: var(--bg-card);
-      color: var(--cream);
-      border: 1px solid var(--border);
-      padding: 8px 16px;
-      border-radius: 10px;
-      font-family: inherit;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .filter-btn.active,
-    .filter-btn:hover {
-      background: linear-gradient(135deg, var(--gold-bright), var(--orange));
-      color: #1a0b04;
-      border-color: transparent;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 14px;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      background: var(--bg-card-hover);
-    }
-
-    .tag {
-      align-self: flex-start;
-      background: rgba(251, 191, 36, 0.14);
-      color: var(--gold-bright);
-      padding: 4px 10px;
-      border-radius: 8px;
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: #ffffff;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .card-footer {
+      padding: 12px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap;
+      font-size: 0.92rem;
     }
 
-    .price {
+    .addr-strip strong {
+      color: var(--gold-bright);
+    }
+
+    .poster-frame {
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: 22px;
+      padding: 12px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+    }
+
+    .poster-frame img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    .poster-caption {
+      margin-top: 10px;
+      text-align: center;
+      color: var(--gold-bright);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    /* Main Layout with Cart */
+    .shop-layout {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: 24px;
+      align-items: start;
+      padding: 20px 0 56px;
+    }
+
+    .category-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .tab-btn {
+      background: var(--bg-card);
+      color: var(--cream);
+      border: 1px solid var(--border);
+      padding: 9px 16px;
+      border-radius: 11px;
+      font-family: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active,
+    .tab-btn:hover {
+      background: linear-gradient(135deg, var(--gold-bright), var(--orange));
+      color: #180903;
+      border-color: transparent;
+    }
+
+    .menu-section {
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title h2 {
+      font-size: 1.45rem;
       font-weight: 900;
       color: var(--gold-bright);
-      font-size: 1.05rem;
     }
 
-    .mini-btn {
+    .section-title span {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .item-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+
+    .item-name {
+      font-weight: 800;
+      font-size: 0.98rem;
+      color: #ffffff;
+    }
+
+    .item-price {
+      color: var(--gold-bright);
+      font-weight: 900;
+      font-size: 0.95rem;
+      margin-top: 2px;
+    }
+
+    .add-btn {
       background: rgba(251, 191, 36, 0.16);
       color: var(--gold-bright);
       border: 1px solid var(--border);
-      padding: 7px 12px;
-      border-radius: 9px;
+      padding: 7px 13px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .add-btn:hover {
+      background: var(--gold-bright);
+      color: #180903;
+    }
+
+    /* Cart Panel */
+    .cart-panel {
+      position: sticky;
+      top: 82px;
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .cart-panel h3 {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--gold-bright);
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-items {
+      display: grid;
+      gap: 8px;
+      max-height: 260px;
+      overflow-y: auto;
+      margin-bottom: 14px;
+    }
+
+    .cart-empty {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 18px 8px;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+    }
+
+    .cart-row {
+      background: rgba(20, 10, 5, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 9px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cart-row-info {
+      font-size: 0.86rem;
+    }
+
+    .cart-row-name {
+      font-weight: 800;
+      color: #ffffff;
+      display: block;
+    }
+
+    .cart-row-sub {
+      color: var(--gold-bright);
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .qty-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--cream);
+      font-weight: 800;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .qty-btn.del {
+      color: #fca5a5;
+      border-color: rgba(248, 113, 113, 0.35);
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 900;
+      font-size: 1.08rem;
+      color: var(--gold-bright);
+      padding: 10px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+
+    .field-group {
+      margin-bottom: 10px;
+    }
+
+    .field-group label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .field-group input,
+    .field-group textarea {
+      width: 100%;
+      background: rgba(20, 10, 5, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 11px;
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    .field-group input:focus,
+    .field-group textarea:focus {
+      outline: none;
+      border-color: var(--gold-bright);
+    }
+
+    .cart-actions {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .clear-btn {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 8px;
+      border-radius: 10px;
       font-family: inherit;
       font-weight: 700;
       font-size: 0.85rem;
       cursor: pointer;
     }
 
-    .mini-btn:hover {
-      background: var(--gold-bright);
-      color: #190a03;
-    }
-
-    /* Location & Order */
-    .info-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .info-item {
-      margin-bottom: 12px;
-    }
-
-    .info-item strong {
-      display: block;
-      color: var(--gold-bright);
-      margin-bottom: 3px;
-    }
-
-    .info-item span {
-      color: var(--muted);
-    }
-
-    .order-box {
-      background: rgba(20, 11, 7, 0.65);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-    }
-
-    .order-box h3 {
-      color: #ffffff;
-      margin-bottom: 12px;
-      font-size: 1.15rem;
-    }
-
-    .order-list {
-      list-style: none;
-      margin-bottom: 14px;
-      display: grid;
-      gap: 8px;
-    }
-
-    .order-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--bg-card);
-      padding: 8px 12px;
-      border-radius: 10px;
-      font-size: 0.9rem;
-    }
-
-    .total-row {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 900;
-      color: var(--gold-bright);
-      font-size: 1.05rem;
-      margin-bottom: 14px;
-    }
-
     footer {
       border-top: 1px solid var(--border);
-      padding: 24px 0;
+      padding: 22px 0;
       text-align: center;
       color: var(--muted);
       font-size: 0.88rem;
-      margin-top: 24px;
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 960px) {
       .hero-grid,
-      .grid-3,
-      .info-box {
+      .shop-layout {
         grid-template-columns: 1fr;
       }
 
-      .hero-stats {
+      .cart-panel {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .items-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -502,15 +560,16 @@
         <div class="brand-badge">أصل</div>
         <div>
           <div class="brand-title">أصل الفريسكا</div>
-          <div class="brand-sub">أبوحماد · أمام سيراميكا الأعصر</div>
+          <div class="brand-sub">شارع بورسعيد أمام سيراميكا الأعصر</div>
         </div>
       </a>
       <nav>
-        <a href="#menu">المنيو</a>
-        <a href="#honey">العسل</a>
-        <a href="#location">العنوان والطلب</a>
+        <a href="#sec-friska">فريسكا</a>
+        <a href="#sec-mix">فريسكا ميكس</a>
+        <a href="#sec-pancake">بان كيك</a>
+        <a href="#cartSection">السلة والطلب</a>
       </nav>
-      <a href="#location" class="btn-primary">اطلب الآن</a>
+      <a href="https://wa.me/201220209582" target="_blank" rel="noopener" class="btn-primary">واتساب: 01220209582</a>
     </div>
   </header>
 
@@ -518,265 +577,331 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="pill">طعم أصلي • جودة يومية</span>
-          <h1>أصل <span>الفريسكا</span> والعسل في أبوحماد</h1>
+          <div class="top-blessings">
+            <span class="blessing-chip">أهم حاجة تصلي على النبي</span>
+            <span class="blessing-chip">أمي أكسجين حياتي</span>
+          </div>
+          <h1>أصل <span>الفريسكا</span> مقرمشة بطعم النعنشة</h1>
           <p>
-            تجربة فريسكا مقرمشة وطازجة مع تشكيلة نكهات وعسل طبيعي، في موقعنا بأبوحماد أمام سيراميكا الأعصر، بتجربة سريعة وسلسة على أي جهاز.
+            اختار من الفريسكا، فريسكا ميكس، أو البان كيك، أضف الكميات اللي تحبها في السلة، واكتب رقم تليفونك وعنوانك عشان يوصلك الطلب مباشرة على واتساب.
           </p>
           <div class="hero-actions">
-            <a href="#menu" class="btn-primary">تصفح الأصناف</a>
-            <a href="#location" class="btn-outline">المكان وطلب الأوردر</a>
+            <a href="#sec-friska" class="btn-primary">منيو الفريسكا</a>
+            <a href="#sec-pancake" class="tab-btn">منيو البان كيك</a>
+            <a href="https://wa.me/201220209582" target="_blank" rel="noopener" class="tab-btn">تواصل واتساب</a>
           </div>
-          <div class="hero-stats">
-            <div class="stat-box">
-              <strong>فريسكا طازجة</strong>
-              <span>تحضير يومي مستمر</span>
-            </div>
-            <div class="stat-box">
-              <strong>عسل طبيعي</strong>
-              <span>نكهات مختارة بعناية</span>
-            </div>
-            <div class="stat-box">
-              <strong>أبوحماد</strong>
-              <span>أمام سيراميكا الأعصر</span>
-            </div>
+          <div class="addr-strip">
+            <div><strong>العنوان:</strong> شارع بورسعيد أمام سيراميكا الأعصر</div>
+            <div><strong>رقم الطلب:</strong> <a href="tel:01220209582"><strong>01220209582</strong></a></div>
           </div>
         </div>
 
-        <div class="poster-card">
-          <div class="poster-circle">أصل الفريسكا</div>
-          <h2>أصل الفريسكا</h2>
-          <div class="location-tag">أبوحماد · أمام سيراميكا الأعصر</div>
-          <p>فريسكا مقرمشة وعسل بطعم يعلّم من أول لقمة — متاح أونلاين وتصفح كامل بدون تعليق.</p>
+        <div class="poster-frame">
+          <img
+            src="poster.jpg"
+            alt="أصل الفريسكا - فريسكا مقرمشة بطعم النعنشة"
+            onerror="this.style.display='none'; document.getElementById('posterFallback').style.display='block';"
+          />
+          <div id="posterFallback" style="display:none; padding: 36px 18px; text-align:center; background: linear-gradient(155deg, #fbbf24, #ea580c); color:#1a0903; border-radius:16px;">
+            <div style="font-size:1.8rem; font-weight:900;">أصل الفريسكا</div>
+            <div style="font-weight:800; margin:6px 0;">فريسكا مقرمشة بطعم النعنشة</div>
+            <div style="font-size:0.9rem; font-weight:700;">شارع بورسعيد أمام سيراميكا الأعصر · 01220209582</div>
+          </div>
+          <div class="poster-caption">أصل الفريسكا · شارع بورسعيد أمام سيراميكا الأعصر</div>
         </div>
       </div>
     </section>
 
-    <section id="menu">
-      <div class="container">
-        <div class="section-head">
-          <h2>قائمة الفريسكا والأصناف</h2>
-          <p>اختر القسم المناسب وابدأ بإضافة الأصناف إلى سلة الطلب السريعة.</p>
+    <div class="container shop-layout">
+      <div>
+        <div class="category-tabs">
+          <button class="tab-btn active" data-show="all">كل الأصناف</button>
+          <button class="tab-btn" data-show="friska">فريسكا</button>
+          <button class="tab-btn" data-show="mix">فريسكا ميكس</button>
+          <button class="tab-btn" data-show="pancake">بان كيك</button>
         </div>
 
-        <div class="filters">
-          <button class="filter-btn active" data-filter="all">الكل</button>
-          <button class="filter-btn" data-filter="friska">فريسكا</button>
-          <button class="filter-btn" data-filter="honey">عسل</button>
-          <button class="filter-btn" data-filter="combo">بوكسات وعروض</button>
-        </div>
+        <!-- الصنف الأول: فريسكا -->
+        <section id="sec-friska" class="menu-section" data-group="friska">
+          <div class="section-title">
+            <h2>فريسكا</h2>
+            <span>الصنف الأول</span>
+          </div>
+          <div class="items-grid" id="friskaGrid"></div>
+        </section>
 
-        <div class="grid-3" id="itemsGrid">
-          <article class="card" data-category="friska">
-            <div>
-              <span class="tag">فريسكا</span>
-              <h3>فريسكا كلاسيك مقرمشة</h3>
-              <p>فريسكا مخبوزة طازجة بقوام مقرمش خفيف مناسب لكل الأوقات.</p>
-            </div>
-            <div class="card-footer">
-              <span class="price">25 ج.م</span>
-              <button class="mini-btn" onclick="addItem('فريسكا كلاسيك مقرمشة', 25)">+ أضف</button>
-            </div>
-          </article>
+        <!-- الصنف الثاني: فريسكا ميكس -->
+        <section id="sec-mix" class="menu-section" data-group="mix">
+          <div class="section-title">
+            <h2>فريسكا ميكس</h2>
+            <span>الصنف الثاني</span>
+          </div>
+          <div class="items-grid" id="mixGrid"></div>
+        </section>
 
-          <article class="card" data-category="friska">
-            <div>
-              <span class="tag">فريسكا</span>
-              <h3>فريسكا بالعسل والشوكولاتة</h3>
-              <p>مزيج غني يجمع بين قرمشة الفريسكا وحلاوة العسل والصوص المميز.</p>
-            </div>
-            <div class="card-footer">
-              <span class="price">35 ج.م</span>
-              <button class="mini-btn" onclick="addItem('فريسكا بالعسل والشوكولاتة', 35)">+ أضف</button>
-            </div>
-          </article>
-
-          <article class="card" data-category="honey">
-            <div>
-              <span class="tag">عسل</span>
-              <h3>عبوة عسل طبيعي مميزة</h3>
-              <p>عسل مختار بعناية بنكهة غنية وقوام أصيل يليق بكل طلب.</p>
-            </div>
-            <div class="card-footer">
-              <span class="price">60 ج.م</span>
-              <button class="mini-btn" onclick="addItem('عبوة عسل طبيعي مميزة', 60)">+ أضف</button>
-            </div>
-          </article>
-
-          <article class="card" data-category="honey">
-            <div>
-              <span class="tag">عسل</span>
-              <h3>إضافة عسل خاصة للفريسكا</h3>
-              <p>طبقة إضافية من العسل الطبيعي لعشاق النكهات المركزة.</p>
-            </div>
-            <div class="card-footer">
-              <span class="price">15 ج.م</span>
-              <button class="mini-btn" onclick="addItem('إضافة عسل خاصة للفريسكا', 15)">+ أضف</button>
-            </div>
-          </article>
-
-          <article class="card" data-category="combo">
-            <div>
-              <span class="tag">بوكس</span>
-              <h3>بوكس الأصحاب (6 قطع)</h3>
-              <p>تشكيلة متنوعة من الفريسكا مع إضافات مختارة للمشاركة مع الأصحاب.</p>
-            </div>
-            <div class="card-footer">
-              <span class="price">140 ج.م</span>
-              <button class="mini-btn" onclick="addItem('بوكس الأصحاب (6 قطع)', 140)">+ أضف</button>
-            </div>
-          </article>
-
-          <article class="card" data-category="combo">
-            <div>
-              <span class="tag">عروض</span>
-              <h3>عرض العيلة والفريسكا</h3>
-              <p>باقة متكاملة من الفريسكا والعسل بسعر مميز للجمعات العائلية.</p>
-            </div>
-            <div class="card-footer">
-              <span class="price">210 ج.م</span>
-              <button class="mini-btn" onclick="addItem('عرض العيلة والفريسكا', 210)">+ أضف</button>
-            </div>
-          </article>
-        </div>
+        <!-- الصنف الثالث: بان كيك -->
+        <section id="sec-pancake" class="menu-section" data-group="pancake">
+          <div class="section-title">
+            <h2>بان كيك</h2>
+            <span>الصنف الثالث</span>
+          </div>
+          <div class="items-grid" id="pancakeGrid"></div>
+        </section>
       </div>
-    </section>
 
-    <section id="honey">
-      <div class="container">
-        <div class="section-head">
-          <h2>ليه أصل الفريسكا؟</h2>
-          <p>صفحة خفيفة وسريعة، بتشتغل باستمرار من غير عداد أيام ولا تعليق في التمرير.</p>
-        </div>
-        <div class="grid-3">
-          <div class="card">
-            <div>
-              <span class="tag">01</span>
-              <h3>تحضير أول بأول</h3>
-              <p>اهتمام بالتفاصيل والقوام الطازج عشان التجربة تفضل بنفس المستوى في كل زيارة.</p>
-            </div>
-          </div>
-          <div class="card">
-            <div>
-              <span class="tag">02</span>
-              <h3>موقع واضح وسهل الوصول</h3>
-              <p>موجودين في أبوحماد أمام سيراميكا الأعصر، ومكان واضح لأي حد يزورنا.</p>
-            </div>
-          </div>
-          <div class="card">
-            <div>
-              <span class="tag">03</span>
-              <h3>تشغيل دائم على GitHub Pages</h3>
-              <p>الرابط مستمر بدون مؤقت 14 يوم، ويمكن تعديل الأسعار والأصناف من ملف index.html بسهولة.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- السلة وبيانات الطلب -->
+      <aside id="cartSection" class="cart-panel">
+        <h3>
+          <span>سلة الطلبات</span>
+          <span id="cartCountBadge" style="font-size:0.85rem; color:var(--muted);">0 صنف</span>
+        </h3>
 
-    <section id="location">
-      <div class="container">
-        <div class="section-head">
-          <h2>العنوان وتجهيز الطلب</h2>
-          <p>راجع تفاصيل المكان أو جهّز قائمة الأصناف اللي تحب تطلبها.</p>
+        <div class="cart-items" id="cartItemsContainer">
+          <div class="cart-empty">السلة فارغة — اضغط على (+ أضف) لاختيار الأصناف</div>
         </div>
-        <div class="info-box">
-          <div>
-            <div class="info-item">
-              <strong>الاسم التجاري</strong>
-              <span>أصل الفريسكا</span>
-            </div>
-            <div class="info-item">
-              <strong>العنوان</strong>
-              <span>أبوحماد · أمام سيراميكا الأعصر</span>
-            </div>
-            <div class="info-item">
-              <strong>ملاحظة للتعديل</strong>
-              <span>يمكنك تعديل الأسعار أو إضافة رقم واتساب مباشر داخل الكود في أي وقت.</span>
-            </div>
-          </div>
 
-          <div class="order-box">
-            <h3>قائمة الطلب الحالية</h3>
-            <ul class="order-list" id="orderList">
-              <li><span>لم تتم إضافة أصناف بعد</span><span>0 ج.م</span></li>
-            </ul>
-            <div class="total-row">
-              <span>الإجمالي التقديري</span>
-              <span id="totalPrice">0 ج.م</span>
-            </div>
-            <button class="btn-primary" style="width: 100%;" onclick="clearOrder()">إفراغ القائمة</button>
-          </div>
+        <div class="cart-total">
+          <span>الإجمالي</span>
+          <span id="cartTotalPrice">0 ج</span>
         </div>
-      </div>
-    </section>
+
+        <div class="field-group">
+          <label for="customerPhone">رقم التليفون *</label>
+          <input type="tel" id="customerPhone" placeholder="مثال: 010xxxxxxxx" required />
+        </div>
+
+        <div class="field-group">
+          <label for="customerAddress">العنوان بالتفصيل *</label>
+          <textarea id="customerAddress" rows="2" placeholder="اكتب المنطقة والشارع وأقرب علامة مميزة"></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="customerNotes">ملاحظات إضافية (اختياري)</label>
+          <input type="text" id="customerNotes" placeholder="مثال: زود صوص أو شوكولاتة" />
+        </div>
+
+        <div class="cart-actions">
+          <button class="btn-whatsapp" onclick="sendOrderToWhatsApp()">إرسال الطلب على واتساب</button>
+          <button class="clear-btn" onclick="clearCart()">إفراغ السلة</button>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <footer>
     <div class="container">
-      أصل الفريسكا — أبوحماد · أمام سيراميكا الأعصر
+      أصل الفريسكا — شارع بورسعيد أمام سيراميكا الأعصر · واتساب: 01220209582
     </div>
   </footer>
 
   <script>
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('#itemsGrid .card');
-    const orderList = document.getElementById('orderList');
-    const totalPriceEl = document.getElementById('totalPrice');
+    const WHATSAPP_NUMBER = '201220209582';
+
+    const MENU_DATA = {
+      friska: [
+        { name: 'هوهوز + نوتيلا', price: 20 },
+        { name: 'هوهوز + نوتيلا وايت', price: 25 },
+        { name: 'أوريو + نوتيلا وايت', price: 25 },
+        { name: 'رولانا', price: 25 },
+        { name: 'مندوبين', price: 25 },
+        { name: 'توينكيز', price: 25 },
+        { name: 'مور', price: 30 },
+        { name: 'نوتيلا', price: 10 },
+        { name: 'وايت', price: 15 },
+        { name: 'لوتس', price: 15 },
+        { name: 'كيندر', price: 20 },
+        { name: 'بستاشيو', price: 25 },
+        { name: 'كارميل', price: 10 },
+        { name: 'فراولة', price: 10 }
+      ],
+      mix: [
+        { name: 'وايت نوتيلا', price: 20 },
+        { name: 'لوتس وايت', price: 20 },
+        { name: 'نوتيلا لوتس', price: 20 },
+        { name: 'كيندر نوتيلا', price: 20 },
+        { name: 'وايت كيندر', price: 20 },
+        { name: 'مندولين هوهوز', price: 30 },
+        { name: 'أوريو هوهوز', price: 30 },
+        { name: 'أوريو توينكيز', price: 30 },
+        { name: 'شاورما فريسكا', price: 80 },
+        { name: 'شاورما كبير', price: 100 }
+      ],
+      pancake: [
+        { name: '16 قطعة نوتيلا', price: 30 },
+        { name: '16 نوتيلا وايت', price: 40 },
+        { name: '16 نوتيلا كيندر', price: 40 },
+        { name: '16 نوتيلا لوتس', price: 40 },
+        { name: '16 لوتس وايت', price: 40 },
+        { name: '16 كيندر', price: 40 },
+        { name: '16 لوتس', price: 40 },
+        { name: '16 وايت', price: 40 },
+        { name: '16 بستاشيو', price: 50 },
+        { name: '16 بستاشيو وايت', price: 50 },
+        { name: '16 بستاشيو نوتيلا', price: 50 },
+        { name: 'موناليزا 15ق', price: 50 },
+        { name: 'موناليزا 20ق', price: 60 },
+        { name: 'موناليزا 25ق', price: 70 },
+        { name: 'وايت كيندر كراميل 15ق', price: 50 },
+        { name: 'كيندر لوتس كراميل 15ق', price: 50 },
+        { name: 'نوتيلا 20ق', price: 40 },
+        { name: 'نوتيلا وايت 20ق', price: 50 },
+        { name: 'نوتيلا لوتس 20ق', price: 50 },
+        { name: 'نوتيلا كيندر 20ق', price: 50 },
+        { name: 'نوتيلا بيستاشيو 20ق', price: 60 },
+        { name: 'نوتيلا 25ق', price: 50 },
+        { name: 'نوتيلا وايت 25ق', price: 60 },
+        { name: 'نوتيلا لوتس 25ق', price: 60 },
+        { name: 'نوتيلا كيندر 25ق', price: 60 }
+      ]
+    };
+
+    const CATEGORY_LABELS = {
+      friska: 'فريسكا',
+      mix: 'فريسكا ميكس',
+      pancake: 'بان كيك'
+    };
+
     let cart = [];
 
-    filterButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.getAttribute('data-filter');
-
-        cards.forEach((card) => {
-          const category = card.getAttribute('data-category');
-          if (filter === 'all' || category === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+    function renderMenu() {
+      Object.keys(MENU_DATA).forEach((cat) => {
+        const gridEl = document.getElementById(`${cat}Grid`);
+        gridEl.innerHTML = MENU_DATA[cat]
+          .map(
+            (item, index) => `
+            <div class="item-card">
+              <div>
+                <div class="item-name">${item.name}</div>
+                <div class="item-price">${item.price} ج</div>
+              </div>
+              <button class="add-btn" onclick="addToCart('${cat}', ${index})">+ أضف</button>
+            </div>
+          `
+          )
+          .join('');
       });
-    });
+    }
 
-    function addItem(name, price) {
-      cart.push({ name, price });
+    function addToCart(cat, index) {
+      const item = MENU_DATA[cat][index];
+      const existing = cart.find((c) => c.category === cat && c.name === item.name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({
+          category: cat,
+          categoryLabel: CATEGORY_LABELS[cat],
+          name: item.name,
+          price: item.price,
+          qty: 1
+        });
+      }
       renderCart();
     }
 
-    function removeItem(index) {
-      cart.splice(index, 1);
+    function changeQty(idx, delta) {
+      if (!cart[idx]) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) {
+        cart.splice(idx, 1);
+      }
       renderCart();
     }
 
-    function clearOrder() {
+    function clearCart() {
       cart = [];
       renderCart();
     }
 
     function renderCart() {
+      const container = document.getElementById('cartItemsContainer');
+      const totalEl = document.getElementById('cartTotalPrice');
+      const badgeEl = document.getElementById('cartCountBadge');
+
+      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      const totalPrice = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+
+      badgeEl.textContent = `${totalQty} قطعة`;
+      totalEl.textContent = `${totalPrice} ج`;
+
       if (!cart.length) {
-        orderList.innerHTML = '<li><span>لم تتم إضافة أصناف بعد</span><span>0 ج.م</span></li>';
-        totalPriceEl.textContent = '0 ج.م';
+        container.innerHTML = '<div class="cart-empty">السلة فارغة — اضغط على (+ أضف) لاختيار الأصناف</div>';
         return;
       }
 
-      let total = 0;
-      orderList.innerHTML = cart
-        .map((item, idx) => {
-          total += item.price;
-          return `<li>
-            <span>${item.name} — <strong>${item.price} ج.م</strong></span>
-            <button class="mini-btn" onclick="removeItem(${idx})">حذف</button>
-          </li>`;
-        })
+      container.innerHTML = cart
+        .map(
+          (item, idx) => `
+          <div class="cart-row">
+            <div class="cart-row-info">
+              <span class="cart-row-name">${item.name} (${item.categoryLabel})</span>
+              <span class="cart-row-sub">${item.qty} × ${item.price} ج = ${item.qty * item.price} ج</span>
+            </div>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
+              <button class="qty-btn" onclick="changeQty(${idx}, -1)">-</button>
+              <button class="qty-btn del" onclick="changeQty(${idx}, -999)">×</button>
+            </div>
+          </div>
+        `
+        )
         .join('');
-
-      totalPriceEl.textContent = `${total} ج.م`;
     }
+
+    function sendOrderToWhatsApp() {
+      const phone = document.getElementById('customerPhone').value.trim();
+      const address = document.getElementById('customerAddress').value.trim();
+      const notes = document.getElementById('customerNotes').value.trim();
+
+      if (!cart.length) {
+        alert('من فضلك أضف صنف واحد على الأقل إلى السلة أولاً.');
+        return;
+      }
+      if (!phone) {
+        alert('من فضلك اكتب رقم التليفون.');
+        document.getElementById('customerPhone').focus();
+        return;
+      }
+      if (!address) {
+        alert('من فضلك اكتب العنوان بالتفصيل.');
+        document.getElementById('customerAddress').focus();
+        return;
+      }
+
+      const lines = cart.map(
+        (item, i) => `${i + 1}. [${item.categoryLabel}] ${item.name} — العدد: ${item.qty} — السعر: ${item.qty * item.price} ج`
+      );
+      const totalPrice = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+
+      let message = `طلب جديد من موقع أصل الفريسكا%0A`;
+      message += `------------------------%0A`;
+      message += lines.join('%0A') + `%0A`;
+      message += `------------------------%0A`;
+      message += `الإجمالي: ${totalPrice} ج%0A`;
+      message += `رقم التليفون: ${phone}%0A`;
+      message += `العنوان: ${address}`;
+      if (notes) {
+        message += `%0Aملاحظات: ${notes}`;
+      }
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+      window.open(url, '_blank', 'noopener');
+    }
+
+    document.querySelectorAll('.tab-btn[data-show]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn[data-show]').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.getAttribute('data-show');
+        document.querySelectorAll('.menu-section[data-group]').forEach((sec) => {
+          const grp = sec.getAttribute('data-group');
+          sec.style.display = target === 'all' || target === grp ? 'block' : 'none';
+        });
+      });
+    });
+
+    renderMenu();
+    renderCart();
   </script>
 </body>
 </html>
