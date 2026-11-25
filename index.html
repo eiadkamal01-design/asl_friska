@@ -1016,6 +1016,7 @@
               <div style="display:flex; align-items:center; gap:10px;">
                 <div class="item-avatar">${it.name.slice(0, 1)}</div>
                 <div>
+                  <div style="font-size:0.74rem; color:var(--gold); font-weight:800;">${it.catTitle}</div>
                   <div style="font-weight:800; font-size:0.94rem;">${it.name}</div>
                   <div style="font-size:0.78rem; color:var(--muted);">${it.price} ج × ${it.qty} = <strong style="color:var(--gold);">${it.price * it.qty} ج</strong></div>
                 </div>
@@ -1077,7 +1078,12 @@
 
       const code = generateOrderCode();
       const totalPrice = cart.reduce((s, i) => s + i.qty * i.price, 0);
-      const itemsText = cart.map((i) => `• ${i.name} × ${i.qty} = ${i.price * i.qty} ج`).join('\n');
+      const itemsText = cart
+        .map((i) => {
+          const itemType = i.name.includes('موناليزا') ? 'موناليزا' : i.catTitle;
+          return `• [${itemType}] ${i.name} × ${i.qty} = ${i.price * i.qty} ج`;
+        })
+        .join('\n');
 
       let msg = `طلب جديد من أصل الفريسكا\n`;
       msg += `كود الطلب: ${code}\n`;
